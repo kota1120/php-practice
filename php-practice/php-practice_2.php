@@ -126,8 +126,8 @@ var_dump($personalInfos);
 
 class Student
 {
-    public $studentId;
-    public $studentName;
+    private $studentId;
+    private $studentName;
 
     public function __construct($id, $name)
     {
@@ -178,8 +178,8 @@ $yamada->attend('PHP');
 date_default_timezone_set('Asia/Tokyo');
 
 $time = new DateTime();
-$time ->modify('-1 month');
-  echo $time->format('Y-m-d');
+$time->modify('-1 month');
+echo $time->format('Y-m-d');
 
 //問題2
 
@@ -188,6 +188,6 @@ date_default_timezone_set('Asia/Tokyo');
 $time = new DateTime();
 $oldtime = new DateTime('1992-04-25');
 $diff = $time->diff($oldtime);
-  echo $diff->format('あの日から%a日経過しました。');
+echo $diff->format('あの日から%a日経過しました。');
 
 ?>
