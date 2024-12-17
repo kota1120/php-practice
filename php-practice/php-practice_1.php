@@ -19,21 +19,19 @@ echo ($num / 2);
 
 date_default_timezone_set('Asia/Tokyo');
 
-echo ('現在時刻は、'. date("Y") . '年' . date("m") . '月' . date("d") . '日 ' . date("H") . '時' . date("i") . '分' . date("s") . '秒です。');
+echo ('現在時刻は、' . date("Y") . '年' . date("m") . '月' . date("d") . '日 ' . date("H") . '時' . date("i") . '分' . date("s") . '秒です。');
 ?>
 
 // Q4 条件分岐-1 if文
 
 <?php
 
-<?php
-
 $device = 'windows' ;
-$OS = ['windows', 'mac', 'Linux'];
-if ($device === $OS[0]) {
+$os = ['windows', 'mac', 'Linux'];
+if ($device === $os[0]) {
     echo '使用OSは、' . $device . 'です。';
 } else {
-    if ($device === $OS[1]) {
+    if ($device === $os[1]) {
         echo '使用OSは、' . $device . 'です。';
 } else {
     echo 'どちらでもありません。';
@@ -49,14 +47,14 @@ $OS = ($device === 'windows' ? '使用OSは、widowsです。':
 <?php
 
 $age = 20;
-$judge = ($age >= 18 ? '成人です。':'未成年です。');
+$judge = ($age >= 18 ? '成人です。' : '未成年です。');
 echo $judge;
 
 // Q6 配列
 
 <?php
 
-$pref = ['東京都', '神奈川県', '栃木県', '千葉県', '埼玉県', '群馬県', '茨城県', ];
+$pref = ['東京都', '神奈川県', '栃木県', '千葉県', '埼玉県', '群馬県', '茨城県'];
 
 echo ($pref[2] . 'と' . $pref[3] . 'は関東地方の都道府県です。');
 
@@ -92,10 +90,10 @@ $pref = ['東京都' => '新宿区', '神奈川県' => '横浜市', '千葉県' 
 
 foreach ($pref as $target => $city) {
     if ($city === '金沢市' || $city === '富山市') {
-        echo $target . 'は関東地方ではありません。'."\n";
-}   else {
-        echo $target . 'の県庁所在地は、' . $city . 'です。'."\n";
-}
+        echo $target . 'は関東地方ではありません。' . "\n";
+    }  else {
+        echo $target . 'の県庁所在地は、' . $city . 'です。' . "\n";
+    }
 }
 
 // Q10 関数-1
@@ -104,7 +102,7 @@ foreach ($pref as $target => $city) {
 
 function hello($name)
 {
-    return $name . 'さん、こんにちは。'."\n";
+    return $name . 'さん、こんにちは。' . "\n";
 }
 
 echo hello('佐藤');
@@ -131,9 +129,9 @@ function distinguishNum($Number)
 {
     if ($Number % 2 === 0) {
         return $Number . 'は偶数です。' . "\n" ;
-} else {
+    } else {
     return  $Number . 'は奇数です。';
-}
+    }
 }
 
 echo distinguishNum(12);

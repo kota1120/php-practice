@@ -1,40 +1,41 @@
-<?php
 // Q1 tic-tac問題
+<?php
 
 echo '1から100までのカウントを開始します' . "\n" . "\n";
 
 for ($i = 1; $i <= 100; $i++) {
     if ($i % 4 === 0 && $i % 5 === 0) {
         echo 'tic-tac' . "\n";
-    }elseif ($i % 5 === 0) {
+    } elseif ($i % 5 === 0) {
         echo 'tac' . "\n";
-    }elseif ($i % 4 === 0) {
+    } elseif ($i % 4 === 0) {
         echo 'tic' . "\n";
-    }else {
+    } else {
         echo $i . "\n";
     }
-    }
+}
 
-別解
+// 別解
+// <?php
 
-echo '1から100までのカウントを開始します' . "\n" . "\n";
+// echo '1から100までのカウントを開始します' . "\n" . "\n";
 
-for ($i = 1; $i <= 100; $i++) {
-    switch ($i) {
-        case ($i % 4 === 0 && $i % 5 === 0);
-            echo 'tic-tac' . "\n";
-            break;
-        case($i % 5 === 0) ;
-            echo 'tac' . "\n";
-            break;
-        case ($i % 4 === 0) ;
-            echo 'tic' . "\n";
-            break;
-        default;
-            echo $i .  "\n";
-            break;
-    }
-    }
+// for ($i = 1; $i <= 100; $i++) {
+//     switch ($i) {
+//         case ($i % 4 === 0 && $i % 5 === 0);
+//             echo 'tic-tac' . "\n";
+//             break;
+//         case($i % 5 === 0) ;
+//             echo 'tac' . "\n";
+//             break;
+//         case ($i % 4 === 0) ;
+//             echo 'tic' . "\n";
+//             break;
+//         default;
+//             echo $i .  "\n";
+//             break;
+//     }
+//     }
 
 // Q2 多次元連想配列
 
@@ -106,7 +107,11 @@ $personalInfos = [
 ];
 
 
-$ageList = [25, 30, 18];
+$ageList = [
+    25,
+    30,
+    18
+];
 
 foreach ($personalInfos as $key => $value ) {
   $personalInfos[$key]['age'] = $ageList[$key];
@@ -174,7 +179,7 @@ date_default_timezone_set('Asia/Tokyo');
 
 $time = new DateTime();
 $time ->modify('-1 month');
-    echo $time->format('Y-m-d');
+  echo $time->format('Y-m-d');
 
 //問題2
 
@@ -183,6 +188,6 @@ date_default_timezone_set('Asia/Tokyo');
 $time = new DateTime();
 $oldtime = new DateTime('1992-04-25');
 $diff = $time->diff($oldtime);
-    echo $diff->format('あの日から%a日経過しました。');
+  echo $diff->format('あの日から%a日経過しました。');
 
 ?>
